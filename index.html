@@ -1,263 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <l>
-    <!--Tab to edit-->
-  </l>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Blog</title>
+  <title>FMB Blog</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <ul class="nav">
-      <li><img src="./Logo.jpg" alt="company logo" type="none"</li>
-            <li><h1 class="mFarsh" type="none">FMB BLOG </h1></li>
-      </ul>
-    
-    <!--<h2 class="mtt">CAPTION AT THE 3MTT ORIENTATION SESSION IN MALHUB, ILORIN, KWARA STATE.</h2>-->
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="./Logo.jpg" alt="Company Logo" class="logo">
+      <h1 class="site-title">FMB BLOG</h1>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <section>
+        <select id="myDropdown1" onchange="handleDropdownChange(1)">
+          <option value="default">About the Author</option>
+          <option value="about">Show Info</option>
+        </select>
+        <div id="content1" class="dropdown-content">
+          As a software developer, I am passionate about turning ideas into reality through code. My journey started with a fascination for how computers work and a desire to make a difference.
+        </div>
+      </section>
+
+      <section>
+        <select id="myDropdown2" onchange="handleDropdownChange(2)">
+          <option value="default">Contact</option>
+          <option value="contact1">08166719544</option>
+          <option value="contact2">09025546486</option>
+          <option value="contact3">08112809223</option>
+        </select>
+        <div id="content2" class="dropdown-content">
+          Please call any of the display numbers for inquiries.
+        </div>
+      </section>
+
+      <section>
+        <select id="myDropdown3" onchange="handleDropdownChange(3)">
+          <option value="default">E-mail</option>
+          <option value="email1">mfaseyi88@gmail.com</option>
+          <option value="email2">farshmos58471@gmail.com</option>
+          <option value="email3">fmb58471@gmail.com</option>
+        </select>
+        <div id="content3" class="dropdown-content">
+          Send inquiries to any of the listed email addresses.
+        </div>
+      </section>
+    </nav>
   </header>
-   <section>
-     <ul class="slideshow" type="none">
-      <li><img src="./mfarsh.jpg" alt="image"></img></li>
-      <li><img src="./las12.jpg" alt="image"></img></li>
-      <li><img src="./las15.jpg" alt="image"></img></li>
-      <li><img src="./las19.jpg" alt="image"></img></li>
-      <li><img src="./las20.jpg" alt="image"></img></li>
-      <li><img src="./las21.jpg" alt="image"></img></li>
-      <li><img src="./las22.jpg" alt="image"></img></li>
-      <li><img src="./las23.jpg" alt="image"></img></li>
-    </ul>
+
+  <!-- PROFILE SECTION -->
+  <main class="main-content">
+    <section class="profile-section">
+      <img src="./fmb.jpg" alt="Faseyi Moses Babatunde" class="profile-picture">
+      <h6 class="name">FASEYI MOSES BABATUNDE</h6>
+      <h6 class="role">Software Developer</h6>
     </section>
-    
-   <section>
-    <h3 class="orient">Thrilled Orientation: Navigating to the World of technology through 3MTT at the MaLhub Tech Centre is an Immersive Experience for Aspiring Tech Talents</h3>
-<p class="intro">The recent orientation program for <strong class="ttm">3MTT</strong> was an unforgettable experience for aspiring tech talents. The event, designed to introduce participants to the exciting world of technology and innovation, provided a platform for networking, learning, and inspiration.
 
-<br>The orientation kicked off with a warm welcome from the community leader, <strong>Mr. Zul</strong>, as abbreviated, expressed his enthusiasm for guiding the participants on their tech journey. A keynote address by a renowned industry expert set the tone for the event, inspiring the participants with stories of success and innovation.
-<br>The highlight of the orientation was the series of hands-on workshops and interactive sessions conducted by experienced mentors. Participants had the opportunity to explore different areas of technology, including web development, app development, data science, and artifcial intelligence. The workshops were designed to be engaging and practical, allowing participants to apply their newfound knowledge immediately.</br>
-<br>The orientation also provided ample opportunities for networking and mentorship. Participants had the chance to connect with fellow aspiring tech talents, share ideas, and form lasting relationships. Mentors were available to offer guidance, answer questions, and provide support throughout the program.</br>
-<br>The orientation concluded with a glimpse into the future of technology. Participants were introduced to emerging trends and technologies that are shaping the industry. This session sparked excitement and curiosity among the participants, inspiring them to explore new possibilities and push the boundaries of innovation.</br>
-<br>The orientation program for <strong class="ttm">3MTT</strong> was a resounding success. It provided participants with a solid foundation in technology, equipped them with practical skills, and inspired them to pursue their tech dreams. As they embark on their journey as aspiring tech talents, the participants are well-prepared to make a significant impact on the world.
-</p>
-    </section>
-          <nav id="navbar">
-            <section>
-              <select name="mydropdown1">
-                <option value="About">About the Author</option>
-                <option value="About">
-                  As a software developer, <br>I am passionate about turning ideas into reality through the power of code</br>. <br>My journey in the world of technology began with a fascination for how computers work</br> <br>and a desire to create something that would make a difference.</br>
-                </option>
-              </select>
-            </section>
-            <secton>
-               <select name="myDropdown2">
-                 <option value="Contact">Contact</option>
-                 <option value="Contact 1">08166719544</option>
-                 <option value="Contact 2">09025546486</option>
-                 <option value="Contact 3">08112809223</option>
-                 </select>
-                 </section>
-                 <section>
-                  <select name="myDropdown3">
-                    <option value="E-mail">E-mail</option>
-                    <option value="mfaseyi88@gmail.com">mfaseyi88@gmail.com</option>
-                    <option value="farshmos58471@gmail.com">farshmos58471@gmail.com</option>
-                    <option value="fmb58471@gmail.com">fmb58471@gmail.com</option>
-                    </select>
-                    </section>
-                    <img src="./fmb.jpg" alt="picture">
-                  </header>
-                  
-             <h2 class="name">FASEYI MOSES BABATUNDE</h2>
-             <p class="software">(Software Developer)</p>
-             <section class="Blog post">
-               <h2 class="header1">Technological Advancements Shaping Our world<h2>
-
-            <p class="page1">Technological advancements have been a driving force behind human progress, revolutionizing industries, societies, and our daily lives. Here are some of the most significant technological trends currently shaping our world:</p>
-
-          <h3 class="h2">Artificial Intelligence and Machine Learning</h3>
-        <p>Hey there! Check out these key points to keep in mind when delving into the world of AI and machine learning:</p>
-        
-      <ul>
-        <li><h4>Natural Language Processing:</h4></li>
-        <p>Natural Language Processing (NLP) is a field of artificial intelligence that deals with the interaction between computers and human (natural) languages. It's a subfield of artificial intelligence that focuses on the ability of computers to understand, interpret, and generate human language.</p>
-
-        <li><h4>Computer Vision:</h4></li>
-        <p>AI algorithms can now analyze and interpret visual information, leading to breakthroughs in facial recognition, vehicles, and medical imaging.</p>
-
-      <li><h4>Generative AI:</h4></li>
-        <p>AI models are capable of creating new content, such as art, music, and text, pushing the boundaries of creativity. Internet of Things (IoT)</p>
-
-    <li><h4>Connected Devices:</h4></li>
-        <p>IoT evices are becoming ubiquitous, connection the internet and exchanging data to automate tasks, improve efficiency, and enhance user experiences.</p>
-
-      <li><h3>Smart Homes:</h3></li>
-      <p>Homes equipped with IoT devices can be controlled remotely, optimizing energy consumption, security, and comfort.</p>
-
-      <li><h4>Industrial IoT:</h4></li>
-        <p>IoT technology is transforming manufacturing processes, enabling predictive maintenance, remote monitoring, and increased productivity. Biotechnology and Genetic Engineering</p>
-
-        <li><h4>Gene Editing:</h4></li>
-        <p>CRISPR-Cas9 technology is revolutionizing genetic engineering, allowing scientists to modify genes with unprecedented precision.</p>
-
-        <li><h4>Personalized Medicine:</h4></li>
-        <p>Advances in biotechnology are enabling personalized treatments based on individual genetic makeup, leading to more effective and targeted therapies.</p>
-
-        <li><h4>Synthetic Biology:</h4></li> 
-        <p>Scientists are designing and building biological systems from scratch, with potential applications in medicine, energy, and materials science. Renewable Energy</p>
-
-      <li><h4>Solar and Wind Power:</h4></li>
-        <p>Solar and wind energy have become more affordable and efficient, contributing to the transition away from fossil fuels.
-
-      <li><h4>Energy Storage:</h4></li>
-        Advancements in battery technology are enabling the storage of renewable energy, making it more reliable and accessible.
-
-      <li><h4>Smart Grids:</h4></li> 
-        Intelligent energy grids are optimizing the distribution and consumption of electricity, improving efficiency and Resilience. Quantum Computing
-    <li>
-      <h4>Computational Power:</h4>
-      </li>
-        <p>
-        Quantum computers have the potential to solve complex problems that are intractable for classical computers, with applications in materials science, drug discovery, and cryptography. These are just a few examples of the technological advancements shaping our world. As technology continues to evolve, we can expect even more groundbreaking innovations that will transform industries, improve our quality of life, and address global challenges.
-        </p>
-    </ul>
-    <h2 id="Read More"></h2>
-    <a href="blog.html"> Click to Read More </a>
-    <section class="Version Invoke">
-      <h2 class="header2">Version Invoke:</h2>
-        Embrace the power of Version Invoke, a revolutionary tool crafted to simplify the control and release of software versions. Unleash its versatility as it seamlessly integrates into diverse development processes, offering a unified hub for monitoring, contrasting, and rolling out various iterations of your applications.
-
-      <h3>Key Features and Benefits</h3>
-      <ol>
-        <li<h4>Centralized Version Management:</h4></li>
-      <ul>
-        <li>
-        Repository: Maintain a central repository for all your project versions, ensuring easy access and organization.
-      </li>
-    </ul>
-        <ul>
-          <li>
-        Metadata: Store essential metadata like version numbers, release dates, and descriptions to facilitate version identification and tracking.
-          </li>
+    <!-- SLIDESHOW -->
+    <section class="slideshow-container">
+      <ul class="slideshow">
+        <li><img src="./mfarsh.jpg" alt="Slideshow Image 1"></li>
+        <li><img src="./las12.jpg" alt="Slideshow Image 2"></li>
+        <li><img src="./las15.jpg" alt="Slideshow Image 3"></li>
+        <li><img src="./las19.jpg" alt="Slideshow Image 4"></li>
+        <li><img src="./las20.jpg" alt="Slideshow Image 5"></li>
+        <li><img src="./las21.jpg" alt="Slideshow Image 6"></li>
+        <li><img src="./las22.jpg" alt="Slideshow Image 7"></li>
+        <li><img src="./las23.jpg" alt="Slideshow Image 8"></li>
       </ul>
-
-      <li>
-        <h4>Version Comparison:</h4>
-      </li>
-    <ul>
-        <li>
-        Side-by-Side Comparison: Visually compare differences between versions, highlighting changes in code, configuration files, or other artifacts.
-        </li>
-    </ul>
-    <ul>
-      <li>
-        Diffing Tools: Integrate with popular diffing tools for in-depth code analysis and review.
-      </li>
-    </ul>
-       <li>
-         <h4>Automated Deployment:</h4>
-       </li>
-    <ul> 
-        <li>
-        Workflows: Define custom deployment workflows to automate the process of deploying specific versions to different environments (e.g., development, staging, production).
-        </li>
-    </ul>
-    <ul>
-        <li>
-        Continuous Delivery: Integrate with CI/CD pipelines to ensure seamless and frequent deployments.
-        </li>
-    </ul>
-       <li><h4>Rollback Capabilities:</h4></li>
-    <ul>
-      <li>
-        Easy Rollback: Quickly revert to previous versions if issues arise or if a new release proves unstable.
-      </li>
-    </ul>
-     <li>
-           <h4>Collaboration and Auditing:</h4>
-        </li>
-      <ul>
-    <li>
-        User Management: Control access to the version repository and assign roles based on permissions.
-          </li>
-        </ul>
-      <ul>
-         <li>
-         Audit Trails: Track changes made to versions, including who made them and when.
-         </li>
-      </ul>
-
-         <h2 class="header3">Use Cases</h2>
-       <div> 
-        * Software Development Teams: Manage multiple versions of applications, ensuring consistency and traceability throughout the development lifecycle.
-        </div>
-     <div> * IT Operations: Automate deployment processes, reduce manual errors, and improve overall system reliability.
-     </div>
-       <div> * DevOps Teams: Implement continuous delivery practices and streamline collaboration between development and operations.
-       </div>
-     <div> * DevOps Teams: Implement continuous delivery practices and streamline collaboration between development and operations.
-     </div>
-
-     <p> 
-         <h3 class="h8">Integration with Other Tools
-          Version Invoke often integrates with other popular tools in the development ecosystem, such as:</h3>
-        <div>
-           * Source Control Systems: Git, SVN, etc.
-          </div>
-      <div>
-           * Build Tools: Maven, Gradle, etc.
-      </div>
-        <div> 
-        * Deployment Tools: Ansible, Chef, Puppet, etc.</div>
-        <div>
-           * Cloud Platforms: AWS, Azure, GCP, etc.
-        </div>
-      <br>By leveraging these integrations, Version Invoke can provide a comprehensive solution for managing software versions throughout the entire development and deployment lifecycle.</br>
-      <br>In conclusion, Version Invoke is a valuable tool for organizations that need to effectively manage and deploy multiple versions of their software. Its features and benefits make it a popular choice for teams of all sizes, from small startups to large enterprises.</br>
+      <p class="caption">
+        <em>Caption at the 3MTT Orientation Section in MaLhub, Ilorin, Kwara State.</em>
       </p>
-      <h2 id="More information"></h2>
-          <a href="page.html">Click to Read More</a>
-          </section></li>
-          <section class="Chelsea Football Club">
-            <h1 class="header2">FOOT BALL UPDATES</h1
-            <p>
-            <h3>Latest updates in Chelsea Football</h3
-            ><br>The latest updates in Chelsea Football Club include</br>
-              <br>* Transfer News.</br>
-              <br>* Chelsea have completed a loan deal for Manchester United forward Jadon Sanch
-              .</br>
-              <br>* Chelsea winger Raheem Sterling has joined Arsenal on a season-long loan.</br>
-              <br>* Chelsea have been linked with a move for Victor Osimhen, the Napoli striker.</br>
-              </p>
-              <h3>Team News:</h3>
-              <ul><ol>Enzo Maresca, Chelsea's new manager, has been making changes to the team.</ol>
-              <ol>Several players have been injured or out of form.</ol></ul>
-              <h3>Results:</h3>
-              <ul>
-                <ol>Chelsea has been struggling in recent matches, losing several games in a row.</ol>
-                <ol>They are currently in the middle of the Premier League table.</ol>
-                </ul>
-                <p>For more detailed information, you can visit the following websites:</p>
-                <section>
-                  <a href="https://www.chelseafc.com/en">Chelsea Football Club Official Website
-                  </section>
-                  <section>
-                    <a href="https://www.skysports.com/chelsea">Sky Sports</a>
-                  </section>
-        <section>
- <a href="https://www.football.london/all-about/chelsea">footballball.london</a>
-       </section>
-            </main>
-                <footer>
-                      <p class="date">Created on 30Th September</p>
-                 <p class="year">&copy; 2024 My Blog</p>
-              </footer
-          </body>
-       <script src="script.js"></script>
-    </html>
+    </section>
+
+    <!-- BLOG POST -->
+    <article class="blog-post">
+      <h2>Thrilled Orientation at MaLhub Tech Centre</h2>
+      <p>
+        The recent 3MTT orientation introduced participants to the exciting world of technology. Workshops on software development, product management, and UI/UX were conducted by experienced mentors, providing a hands-on experience.
+      </p>
+      <p>
+        Participants also explored emerging trends in tech, forming networks and gaining mentorship that will help them in their tech journey.
+      </p>
+    </article>
+
+    <section class="technology-section">
+      <h2>Technological Advancements Shaping Our World</h2>
+
+      <article>
+        <h3>Artificial Intelligence and Machine Learning</h3>
+        <p>AI and ML are transforming industries. Key concepts include:</p>
+        <ul>
+          <li><strong>Natural Language Processing (NLP):</strong> Enabling computers to understand and generate human language.</li>
+          <li><strong>Computer Vision:</strong> Algorithms analyzing visual information for various applications.</li>
+          <li><strong>Generative AI:</strong> Models creating original content like text, music, and art.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Internet of Things (IoT)</h3>
+        <ul>
+          <li><strong>Connected Devices:</strong> Automating tasks for enhanced user experiences.</li>
+          <li><strong>Smart Homes:</strong> Remote control of appliances for optimized energy consumption and security.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="footer-links">
+      <h2>More Information</h2>
+      <a href="blog.html">Click to Read More</a>
+      <a href="page.html">Version Invoke Details</a>
+    </section>
+
+    <article class="football-updates">
+      <h2>Chelsea Football Club Updates</h2>
+      <p><strong>Latest Transfer News:</strong> Chelsea completes loan deal for Jadon Sancho.</p>
+      <p><strong>Team News:</strong> New manager Enzo Maresca is reshaping the team.</p>
+      <p><strong>Recent Results:</strong> Chelsea is currently mid-table after consecutive losses.</p>
+      <a href="https://www.chelseafc.com/en">Official Chelsea Website</a>
+      <br><a href="https://www.skysports.com/chelsea">Sky Sport Chelsea Website</a></br>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Created on 30th September</p>
+    <p>&copy; 2024 My Blog</p>
+  </footer>
+
+</body>
+
+</html>
