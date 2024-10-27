@@ -115,7 +115,7 @@
 // });
 
 
-;
+
 // Function to handle dropdown change
 function handleDropdownChange(dropdownNumber) {
   // Hide all dropdown contents

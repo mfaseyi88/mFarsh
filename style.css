@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  margin: 0;
+  margin: 10px, auto;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
@@ -75,9 +75,10 @@ a:hover {
 }
 
 .navbar select {
-  padding: 8px;
+  margin-right: 0px auto;
+  padding: 3px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
 }
 
 /*.dropdown-content {
@@ -142,9 +143,9 @@ ul li {
 /* Main Content */
 .main-content {
   width: 80%;
-  margin: 20px auto;
-  background-color: white;
-  padding: 20px;
+  margin: 10px auto;
+  background-color: #f4f4f4;
+  padding: 70px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -168,7 +169,7 @@ ul {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 3px 0;
   margin-top: 20px;
 }
 
@@ -192,11 +193,11 @@ ul {
 
   .navbar {
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
   }
 
   .main-content {
-    width: 95%;
+    width: 100%;
   }
 
   .slideshow {
@@ -210,7 +211,7 @@ ul {
   }
 
   .navbar {
-    gap: 30px;
+    gap: 5px;
   }
 
   h1, h2 {
