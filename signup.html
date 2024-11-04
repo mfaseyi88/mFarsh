@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 300px;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+        }
+        .container h2 {
+            text-align: left;
+        }
+        .container input[type="text"],
+        .container input[type="email"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .container .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .container .remember-me input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #45a049;
+        }
+        .container .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .container .login-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .container .login-link a:hover {
+            text-decoration: underline;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" action="submit_signup" method="post">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="middle_name" placeholder="Middle Name (Optional)">
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <small class="error" id="passwordError"></small>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+            <small class="error" id="confirmPasswordError"></small>
+            
+            <div class="remember-me">
+                <input type="checkbox" name="remember_me" id="remember_me">
+                <label for="remember_me">Remember Me</label>
+            </div>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+    </div>
+    
+    <script>
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirm_password");
+        const passwordError = document.getElementById("passwordError");
+        const confirmPasswordError = document.getElementById("confirmPasswordError");
+        const signupForm = document.getElementById("signupForm");
+
+        // Password validation for complexity
+        passwordInput.addEventListener("input", () => {
+            const password = passwordInput.value;
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
+            if (!regex.test(password)) {
+                passwordError.textContent = "Password must be at least six characters, contain upper and lower case letters, a number, and a special character.";
+            } else {
+                passwordError.textContent = "";
+            }
+        });
+
+        // Password match validation
+        confirmPasswordInput.addEventListener("input", () => {
+            if (confirmPasswordInput.value !== passwordInput.value) {
+                confirmPasswordError.textContent = "Passwords do not match.";
+            } else {
+                confirmPasswordError.textContent = "";
+            }
+        });
+
+        // Form submission check
+        signupForm.addEventListener("submit", (e) => {
+            if (passwordError.textContent || confirmPasswordError.textContent) {
+                e.preventDefault();
+                alert("Please fix the highlighted errors.");
+            }
+        });
+    </script>
+</body>
+</html>
