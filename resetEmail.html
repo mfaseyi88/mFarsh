@@ -1,0 +1,124 @@
+<!-- Reset Email Page (reset-email.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Email</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+    
+    .login-container {
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 1em;
+      color: #333;
+    }
+    
+    .input-group {
+      margin-bottom: 1em;
+      text-align: left;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.3em;
+      color: #555;
+    }
+    
+    input {
+      width: 100%;
+      padding: 0.8em;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+    
+    .login-btn {
+      width: 100%;
+      padding: 0.8em;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+    
+    .login-btn:hover {
+      background-color: #45a049;
+    }
+    
+    .options {
+      margin-top: 1em;
+      font-size: 0.9em;
+      color: #333;
+    }
+    
+    .options a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    .options a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-container">
+      <h2>Reset Email</h2>
+      <form id="resetEmailForm">
+        <div class="input-group">
+          <label for="new-email">New Email</label>
+          <input type="email" id="new-email" placeholder="Enter your new email" required>
+        </div>
+        <button type="submit" class="login-btn">Update Email</button>
+        <div class="options">
+          <a href="login.html" id="backToLoginLink">Back to Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("resetEmailForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const newEmail = document.getElementById("new-email").value;
+
+      // Basic email format validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(newEmail)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      alert("Email updated to " + newEmail);
+      // Implement the logic to update the email in the backend
+    });
+  </script>
+</body>
+</html>
