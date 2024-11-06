@@ -1,141 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>FMB Blog</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="./Logo.jpg" alt="Company Logo" class="logo">
-      <h1 class="site-title">FMB BLOG</h1>
-    </div>
-
-    <nav class="navbar" id="navbar">
-      <section>
-        <select id="myDropdown1" onchange="handleDropdownChange(1)">
-          <option value="default">About the Author</option>
-          <option value="about">Show Info</option>
-        </select>
-        <div id="content1" class="dropdown-content">
-          As a software developer, I am passionate about turning ideas into reality through code. My journey started with a fascination for how computers work and a desire to make a difference.
-        </div>
-      </section>
-
-      <section>
-        <select id="myDropdown2" onchange="handleDropdownChange(2)">
-          <option value="default">Contact</option>
-          <option value="contact1">08166719544</option>
-          <option value="contact2">09025546486</option>
-          <option value="contact3">08112809223</option>
-        </select>
-        <div id="content2" class="dropdown-content">
-          Please call any of the display numbers for inquiries.
-        </div>
-      </section>
-
-      <section>
-        <select id="myDropdown3" onchange="handleDropdownChange(3)">
-          <option value="default">E-mail</option>
-          <option value="email1">mfaseyi88@gmail.com</option>
-          <option value="email2">farshmos58471@gmail.com</option>
-          <option value="email3">fmb58471@gmail.com</option>
-        </select>
-        <div id="content3" class="dropdown-content">
-          Send inquiries to any of the listed email addresses.
-        </div>
-      </section>
-    </nav>
-  </header>
-
-  <!-- PROFILE SECTION -->
-  <main class="main-content">
-    <section class="profile-section">
-      <img src="./fmb.jpg" alt="Faseyi Moses Babatunde" class="profile-picture">
-      <h6 class="name">FASEYI MOSES BABATUNDE</h6>
-      <h6 class="role">Software Developer</h6>
-    </section>
-
-    <!-- SLIDESHOW -->
-    <section class="slideshow-container">
-      <ul class="slideshow">
-        <li><img src="./mfarsh.jpg" alt="Slideshow Image 1"></li>
-        <li><img src="./las12.jpg" alt="Slideshow Image 2"></li>
-        <li><img src="./las15.jpg" alt="Slideshow Image 3"></li>
-        <li><img src="./las19.jpg" alt="Slideshow Image 4"></li>
-        <li><img src="./las20.jpg" alt="Slideshow Image 5"></li>
-        <li><img src="./las21.jpg" alt="Slideshow Image 6"></li>
-        <li><img src="./las22.jpg" alt="Slideshow Image 7"></li>
-        <li><img src="./las23.jpg" alt="Slideshow Image 8"></li>
-      </ul>
-      <p class="caption">
-        <em>Caption at the 3MTT Orientation Section in MaLhub, Ilorin, Kwara State.</em>
-      </p>
-    </section>
-
-    <!-- BLOG POST -->
-    <article class="blog-post">
-      <h2>Thrilled Orientation at MaLhub Tech Centre</h2>
-      <p>
-        The recent 3MTT orientation introduced participants to the exciting world of technology. Workshops on software development, product management, and UI/UX were conducted by experienced mentors, providing a hands-on experience.
-      </p>
-      <p>
-        Participants also explored emerging trends in tech, forming networks and gaining mentorship that will help them in their tech journey.
-      </p>
-    </article>
-
-    <section class="technology-section">
-      <h2>Technological Advancements Shaping Our World</h2>
-
-      <article>
-        <h3>Artificial Intelligence and Machine Learning</h3>
-        <p>AI and ML are transforming industries. Key concepts include:</p>
-        <ul>
-          <li><strong>Natural Language Processing (NLP):</strong> Enabling computers to understand and generate human language.</li>
-          <li><strong>Computer Vision:</strong> Algorithms analyzing visual information for various applications.</li>
-          <li><strong>Generative AI:</strong> Models creating original content like text, music, and art.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Internet of Things (IoT)</h3>
-        <ul>
-          <li><strong>Connected Devices:</strong> Automating tasks for enhanced user experiences.</li>
-          <li><strong>Smart Homes:</strong> Remote control of appliances for optimized energy consumption and security.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="footer-links">
-      <h2>More Information</h2>
-      <a href="blog.html">Click to Read More</a>
-      <a href="page.html">Version Invoke Details</a>
-    </section>
-
-    <article class="football-updates">
-      <h2>Chelsea Football Club Updates</h2>
-      <p><strong>Latest Transfer News:</strong> Chelsea completes loan deal for Jadon Sancho.</p>
-      <p><strong>Team News:</strong> New manager Enzo Maresca is reshaping the team.</p>
-      <p><strong>Recent Results:</strong> Chelsea is currently mid-table after consecutive losses.</p>
-      <a href="https://www.chelseafc.com/en">Official Chelsea Website</a>
-      <br><a href="https://www.skysports.com/chelsea">Sky Sport Chelsea Website</a></br>
-    </article>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>Created on 30th September</p>
-    <p>&copy; 2024 My Blog</p>
-  </footer>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>FunNest</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
