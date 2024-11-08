@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <style>
-      body {
+        body {
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
@@ -32,6 +32,19 @@
             margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 9px;
+            padding-right: 40px; /* space for the eye icon */
+            box-sizing: border-box;
+        }
+        .password-container {
+            position: relative;
+        }
+        .password-toggle {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
         }
         .container .remember-me {
             display: flex;
@@ -78,9 +91,21 @@
             <input type="text" name="middle_name" placeholder="Middle Name (Optional)">
             <input type="text" name="surname" placeholder="Surname" required>
             <input type="email" name="email" placeholder="Email Address" required>
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <span class="password-toggle" onclick="togglePasswordVisibility(this)">
+                    &#128065; <!-- Eye symbol -->
+                </span>
+            </div>
             <small class="error" id="passwordError"></small>
-            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+
+            <div class="password-container">
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+                <span class="password-toggle" onclick="togglePasswordVisibility(this)">
+                    &#128065;
+                </span>
+            </div>
             <small class="error" id="confirmPasswordError"></small>
             
             <div class="remember-me">
@@ -123,6 +148,18 @@
                 confirmPasswordError.textContent = "";
             }
         });
+
+        // Toggle password visibility with icon change
+        function togglePasswordVisibility(toggleIcon) {
+            const passwordField = toggleIcon.previousElementSibling;
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.innerHTML = "&#128065;&#x20E0;"; // Eye with slash
+            } else {
+                passwordField.type = "password";
+                toggleIcon.innerHTML = "&#128065;"; // Eye
+            }
+        }
 
         // Form submission check
         signupForm.addEventListener("submit", (e) => {
