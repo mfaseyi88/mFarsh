@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Verification Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 2rem;
+    }
+    .form-box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .position-relative .toggle-visibility {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-box">
+  <h4 class="mb-3">You're almost done! Help us protect you from fraud and verify your identity.</h4>
+
+  <form id="applicationForm">
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dob" class="form-label">Date of Birth (MM/DD/YYYY)</label>
+      <input type="text" class="form-control" id="dob" placeholder="MM/DD/YYYY" required>
+    </div>
+
+<div class="mb-3">
+  <label for="ssn" class="form-label">Social Security Number or ITIN</label>
+  <div class="position-relative d-flex align-items-center">
+    <input type="password" class="form-control pe-5" id="ssn" required>
+    <i class="bi bi-eye-slash toggle-visibility position-absolute end-0 me-3" onclick="toggleVisibility('ssn', this)"></i>
+  </div>
+</div>
+
+<div class="mb-3">
+  <label for="ssnConfirm" class="form-label">Confirm SSN or ITIN</label>
+  <div class="position-relative d-flex align-items-center">
+    <input type="password" class="form-control pe-5" id="ssnConfirm" required>
+    <i class="bi bi-eye-slash toggle-visibility position-absolute end-0 me-3" onclick="toggleVisibility('ssnConfirm', this)"></i>
+  </div>
+</div>
+
+    <div class="mb-3">
+      <label for="income" class="form-label">Total Annual Income ($/Year)</label>
+      <input type="number" class="form-control" id="income" placeholder="e.g. 35000" required>
+      <div class="form-text">
+        Include all regular income sources like jobs, self-employment, public assistance, etc.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="idType" class="form-label">Select ID Type</label>
+      <select class="form-select" id="idType" required>
+        <option value="">-- Select ID Type --</option>
+        <option value="drivers_license">Driver's License</option>
+        <option value="other">Other Card</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="idFront" class="form-label">Upload Front of ID Card</label>
+      <input type="file" class="form-control" id="idFront" accept="image/*,application/pdf" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="idBack" class="form-label">Upload Back of ID Card</label>
+      <input type="file" class="form-control" id="idBack" accept="image/*,application/pdf" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="ssnFile" class="form-label">Upload SSN Document</label>
+      <input type="file" class="form-control" id="ssnFile" accept="image/*,application/pdf" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Submit Form</button>
+  </form>
+</div>
+
+<script>
+  function toggleVisibility(inputId, icon) {
+    const input = document.getElementById(inputId);
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("bi-eye-slash");
+      icon.classList.add("bi-eye");
+    } else {
+      input.type = "password";
+      icon.classList.remove("bi-eye");
+      icon.classList.add("bi-eye-slash");
+    }
+  }
+
+  document.getElementById("applicationForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const ssn = document.getElementById("ssn").value;
+    const confirmSsn = document.getElementById("ssnConfirm").value;
+
+    if (ssn !== confirmSsn) {
+      alert("SSN or ITIN does not match. Please check again.");
+    } else {
+      alert("Form submitted successfully.");
+      // Add backend submission logic here
+    }
+  });
+</script>
+
+</body>
+</html>
